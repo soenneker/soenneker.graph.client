@@ -1,3 +1,7 @@
+using System.Threading.Tasks;
+using FluentAssertions;
+using Microsoft.Graph;
+using Soenneker.Facts.Local;
 using Soenneker.Graph.Client.Abstract;
 using Soenneker.Tests.FixturedUnit;
 using Xunit;
@@ -13,5 +17,12 @@ public class GraphClientUtilTests : FixturedUnitTest
     public GraphClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
     {
         _util = Resolve<IGraphClientUtil>(true);
+    }
+
+    [LocalFact]
+    public async Task Get_ReturnsNonNull()
+    {
+        GraphServiceClient client = await _util.Get();
+        client.Should().NotBeNull();
     }
 }

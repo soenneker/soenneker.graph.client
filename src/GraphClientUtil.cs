@@ -7,7 +7,6 @@ using Soenneker.Utils.AsyncSingleton;
 using System.Threading.Tasks;
 using System;
 using Microsoft.Extensions.Logging;
-using Soenneker.Extensions.ValueTask;
 
 namespace Soenneker.Graph.Client;
 
@@ -36,11 +35,11 @@ public class GraphClientUtil : IGraphClientUtil
         return _client.Get();
     }
 
-    public async ValueTask DisposeAsync()
+    public ValueTask DisposeAsync()
     {
         GC.SuppressFinalize(this);
 
-        await _client.DisposeAsync().NoSync();
+        return _client.DisposeAsync();
     }
 
     public void Dispose()
