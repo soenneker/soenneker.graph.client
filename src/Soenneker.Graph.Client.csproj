@@ -44,7 +44,7 @@
     <ItemGroup>
         <PackageReference Include="Azure.Identity" Version="1.11.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
-        <PackageReference Include="Microsoft.Graph" Version="5.49.0" />
+        <PackageReference Include="Microsoft.Graph" Version="5.50.0" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="2.1.256" />
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="2.1.230" />
     </ItemGroup>
