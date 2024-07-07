@@ -6,6 +6,7 @@ using Soenneker.Graph.Client.Abstract;
 using Soenneker.Utils.AsyncSingleton;
 using System.Threading.Tasks;
 using System;
+using System.Threading;
 using Microsoft.Extensions.Logging;
 
 namespace Soenneker.Graph.Client;
@@ -30,9 +31,9 @@ public class GraphClientUtil : IGraphClientUtil
         });
     }
 
-    public ValueTask<GraphServiceClient> Get()
+    public ValueTask<GraphServiceClient> Get(CancellationToken cancellationToken = default)
     {
-        return _client.Get();
+        return _client.Get(cancellationToken);
     }
 
     public ValueTask DisposeAsync()

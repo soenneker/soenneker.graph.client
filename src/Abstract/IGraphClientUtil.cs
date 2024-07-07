@@ -1,5 +1,6 @@
 using Microsoft.Graph;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Soenneker.Graph.Client.Abstract;
@@ -9,5 +10,5 @@ namespace Soenneker.Graph.Client.Abstract;
 /// </summary>
 public interface IGraphClientUtil : IDisposable, IAsyncDisposable
 {
-    ValueTask<GraphServiceClient> Get();
+    ValueTask<GraphServiceClient> Get(CancellationToken cancellationToken = default);
 }
