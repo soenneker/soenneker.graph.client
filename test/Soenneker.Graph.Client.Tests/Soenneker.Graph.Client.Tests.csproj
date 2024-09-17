@@ -32,7 +32,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\src\Soenneker.Graph.Client.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Graph.Client.csproj" />
     </ItemGroup>
 
 </Project>
