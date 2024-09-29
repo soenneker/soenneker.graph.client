@@ -46,6 +46,6 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
         <PackageReference Include="Microsoft.Graph" Version="5.58.0" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="2.1.444" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="2.1.391" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="2.1.394" />
     </ItemGroup>
 </Project>
