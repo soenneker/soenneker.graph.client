@@ -22,6 +22,7 @@ public class GraphClientUtil : IGraphClientUtil
         {
             logger.LogDebug("Connecting to Microsoft Graph...");
 
+            // TODO: Move to better config location
             var tenantId = config.GetValueStrict<string>("Azure:B2C:TenantId");
             var clientId = config.GetValueStrict<string>("Azure:B2C:ClientId");
             var clientSecret = config.GetValueStrict<string>("Azure:B2C:ClientSecret");
