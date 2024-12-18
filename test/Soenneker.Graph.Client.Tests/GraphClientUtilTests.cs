@@ -5,7 +5,7 @@ using Soenneker.Facts.Local;
 using Soenneker.Graph.Client.Abstract;
 using Soenneker.Tests.FixturedUnit;
 using Xunit;
-using Xunit.Abstractions;
+
 
 namespace Soenneker.Graph.Client.Tests;
 
