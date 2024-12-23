@@ -2,8 +2,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Soenneker.Fixtures.Unit;
-using Soenneker.Graph.Client.Registrars;
 using Soenneker.Utils.Test;
+using Soenneker.Graph.Client.Registrars;
 
 namespace Soenneker.Graph.Client.Tests;
 
@@ -26,6 +26,6 @@ public class Fixture : UnitFixture
         IConfiguration config = TestUtil.BuildConfig();
         services.AddSingleton(config);
 
-        services.AddGraphClientUtilAsSingleton();
+        services.AddGraphClientUtilAsScoped();
     }
 }
