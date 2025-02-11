@@ -1,4 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Soenneker.Graph.Client.Abstract;
 
@@ -12,16 +12,18 @@ public static class GraphClientUtilRegistrar
     /// <summary>
     /// Adds <see cref="IGraphClientUtil"/> as a singleton service. <para/>
     /// </summary>
-    public static void AddGraphClientUtilAsSingleton(this IServiceCollection services)
+    public static IServiceCollection AddGraphClientUtilAsSingleton(this IServiceCollection services)
     {
         services.TryAddSingleton<IGraphClientUtil, GraphClientUtil>();
+        return services;
     }
 
     /// <summary>
     /// Adds <see cref="IGraphClientUtil"/> as a scoped service. <para/>
     /// </summary>
-    public static void AddGraphClientUtilAsScoped(this IServiceCollection services)
+    public static IServiceCollection AddGraphClientUtilAsScoped(this IServiceCollection services)
     {
         services.TryAddScoped<IGraphClientUtil, GraphClientUtil>();
+        return services;
     }
 }
