@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Graph.Client
+﻿# Contributing to Soenneker.Graph.Client
 
 We're excited that you're interested in contributing!
 
