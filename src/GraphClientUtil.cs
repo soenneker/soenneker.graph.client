@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 namespace Soenneker.Graph.Client;
 
 /// <inheritdoc cref="IGraphClientUtil"/>
-public class GraphClientUtil : IGraphClientUtil
+public sealed class GraphClientUtil : IGraphClientUtil
 {
     private readonly AsyncSingleton<GraphServiceClient> _client;
 
@@ -39,15 +39,11 @@ public class GraphClientUtil : IGraphClientUtil
 
     public ValueTask DisposeAsync()
     {
-        GC.SuppressFinalize(this);
-
         return _client.DisposeAsync();
     }
 
     public void Dispose()
     {
-        GC.SuppressFinalize(this);
-
         _client.Dispose();
     }
 }
