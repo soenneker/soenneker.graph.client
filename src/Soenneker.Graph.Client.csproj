@@ -42,7 +42,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Identity" Version="1.15.0" />
+        <PackageReference Include="Azure.Identity" Version="1.16.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />
         <PackageReference Include="Microsoft.Graph" Version="5.91.0" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.721" />
