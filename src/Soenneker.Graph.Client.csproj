@@ -43,7 +43,7 @@
 
     <ItemGroup>
         <PackageReference Include="Azure.Identity" Version="1.16.0" />
-        <PackageReference Include="Microsoft.Graph" Version="5.92.0" />
+        <PackageReference Include="Microsoft.Graph" Version="5.93.0" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="3.0.722" />
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="3.0.716" />
     </ItemGroup>
