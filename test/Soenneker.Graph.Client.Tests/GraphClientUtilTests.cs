@@ -1,20 +1,19 @@
 using Soenneker.Graph.Client.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Graph.Client.Tests;
 
-[Collection("Collection")]
-public class GraphClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public class GraphClientUtilTests : HostedUnitTest
 {
     private readonly IGraphClientUtil _util;
 
-    public GraphClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public GraphClientUtilTests(Host host) : base(host)
     {
         _util = Resolve<IGraphClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
