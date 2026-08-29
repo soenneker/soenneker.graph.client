@@ -11,9 +11,9 @@ namespace Soenneker.Graph.Client.Abstract;
 public interface IGraphClientUtil : IDisposable, IAsyncDisposable
 {
     /// <summary>
-    /// Gets the value.
+    /// Returns the configured graph Service Client used by the graph client.
     /// </summary>
-    /// <param name="cancellationToken">The cancellation token.</param>
-    /// <returns>A task containing the result of the operation.</returns>
+    /// <param name="cancellationToken">Token used to cancel the operation.</param>
+    /// <returns>A task whose result is the requested graph Service Client.</returns>
     ValueTask<GraphServiceClient> Get(CancellationToken cancellationToken = default);
 }
