@@ -5,7 +5,7 @@ using Soenneker.Graph.Client.Abstract;
 namespace Soenneker.Graph.Client.Registrars;
 
 /// <summary>
-/// An async thread-safe singleton for the Microsoft Graph client
+/// Registers the Microsoft Graph client provider.
 /// </summary>
 public static class GraphClientUtilRegistrar
 {
