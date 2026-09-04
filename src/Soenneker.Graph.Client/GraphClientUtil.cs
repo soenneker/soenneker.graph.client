@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Soenneker.Graph.Client;
 
+/// <inheritdoc cref="IGraphClientUtil" />
 public sealed class GraphClientUtil : IGraphClientUtil
 {
     private readonly ILogger<GraphClientUtil> _logger;
