@@ -26,9 +26,9 @@ public sealed class GraphClientUtil : IGraphClientUtil
         _logger = logger;
 
         // Fail fast; no IConfiguration retained
-        _tenantId = config.GetValueStrict<string>("Azure:AzureAd:TenantId");
-        _clientId = config.GetValueStrict<string>("Azure:AzureAd:ClientId");
-        _clientSecret = config.GetValueStrict<string>("Azure:AzureAd:ClientSecret");
+        _tenantId = config.GetStringStrict("Azure:AzureAd:TenantId");
+        _clientId = config.GetStringStrict("Azure:AzureAd:ClientId");
+        _clientSecret = config.GetStringStrict("Azure:AzureAd:ClientSecret");
 
         // No closure: method group
         _client = new AsyncSingleton<GraphServiceClient>(CreateClient);
